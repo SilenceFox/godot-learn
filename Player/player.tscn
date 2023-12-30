@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c07g4xku2br4d"]
+
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_5w6cd"]
+[ext_resource type="Texture2D" uid="uid://kuy5i6giucsx" path="res://icon.svg" id="2_5170b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jhjw"]
+size = Vector2(63, 64)
+
+[node name="Player" type="RigidBody2D"]
+script = ExtResource("1_5w6cd")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-101, -29)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_5170b")
+
+[node name="Camera2D" type="Camera2D" parent="Icon"]
+process_callback = 0
+position_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-101, -29)
+shape = SubResource("RectangleShape2D_6jhjw")

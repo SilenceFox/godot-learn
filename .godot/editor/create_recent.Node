@@ -1,4 +1,5 @@
 RigidBody2D
+CharacterBody2D
 CollisionShape2D
 Camera2D
 TileMap
